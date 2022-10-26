@@ -121,7 +121,8 @@
 //     EXPECT_EQ(shopinglist.size(), 4);
 // }
 
-// TEST(HW1Test, TEST11) {
+// TEST(HW1Test, TEST11)
+// {
 //     using namespace book;
 //     Books inventory = read_database("inventory.txt");
 //     Books shopinglist;
@@ -198,15 +199,15 @@
 //     EXPECT_NEAR(cost_function(dataset, {1, 1, 1, 1}), 618864, 10);
 // }
 
-TEST(HW1Test, TEST18)
-{
-    using namespace regression;
-    Data dataset = read_database("fish.txt");
+// TEST(HW1Test, TEST18)
+// {
+//     using namespace regression;
+//     Data dataset = read_database("fish.txt");
 
-    auto theta = linear_regression(dataset, {0, 0, 0, 0}, 1e-7);
-    // final theta must be around [-0.0109046, 0.510132, 0.543724, -0.0134072]
-    EXPECT_NEAR(theta[0], -0.0109046, 0.1);
-    EXPECT_NEAR(theta[1], 0.510132, 0.1);
-    EXPECT_NEAR(theta[2], 0.543724, 0.1);
-    EXPECT_NEAR(theta[3], -0.0134072, 0.1);
-}
+//     auto theta = linear_regression(dataset, {0, 0, 0, 0}, 1e-7);
+//     // final theta must be around [-0.0109046, 0.510132, 0.543724, -0.0134072]
+//     EXPECT_NEAR(theta[0], -0.0109046, 0.1);
+//     EXPECT_NEAR(theta[1], 0.510132, 0.1);
+//     EXPECT_NEAR(theta[2], 0.543724, 0.1);
+//     EXPECT_NEAR(theta[3], -0.0134072, 0.1);
+// }

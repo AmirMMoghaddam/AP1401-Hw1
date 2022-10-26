@@ -71,7 +71,35 @@ bool book::order(Books &inventory, Books &shopinglist, std::string isbn)
     return true;
 }
 
-double get_receipt(Books shopinglist)
+double book::get_receipt(Books shopinglist)
 {
-    // complete the prints
+
+    double fullprice{0.0};
+    std::string First(62, '*');
+    std::string Second{"|   Title                    |   isbn        |   price       |"};
+    std::cout << First << std::endl;
+    std::cout << Second << std::endl;
+    std::cout << First << std::endl;
+    std::setprecision(10);
+    for (auto &Temp : shopinglist)
+    {
+        std::string Line{""};
+        fullprice += Temp.cost;
+        if (Temp.title.length() > 20)
+        {
+
+            std::cout << "|   " + Temp.title.substr(0, 17) + "...    |   " + Temp.isbn + "   |   " + std::to_string(Temp.cost) + "$    |" << std::endl;
+        }
+        else
+        {
+            size_t numberofs{20 - Temp.title.length()};
+            std::string space(numberofs + 1, ' ');
+            std::cout << "|   " + Temp.title + space + "   |   " + Temp.isbn + "   |   " + std::to_string(Temp.cost) + "$    |" << std::endl;
+        }
+        std::string third(62, '-');
+        std::cout << third << std::endl;
+    }
+    std::cout << "          TOTAL PRICE :   " + std::to_string(fullprice) << "$" << std::endl;
+    std::cout << First << std::endl;
+    return fullprice;
 }

@@ -9,9 +9,11 @@ int main(int argc, char **argv)
 {
     if (false) // make false to run unit-tests
     {
-        Data dataset = regression::read_database("fish.txt");
-        std::cout << regression::cost_function(dataset, {0, 0, 0, 0}) << std::endl;
-        std::cout << regression::cost_function(dataset, {1, 1, 1, 1}) << std::endl;
+        std::string First(49, '*');
+        std::string Second{"|   Title       |   isbn        |   price       |"};
+        std::cout << First << std::endl;
+        std::cout << Second << std::endl;
+        std::cout << First << std::endl;
     }
     else
     {
