@@ -9,11 +9,7 @@ int main(int argc, char **argv)
 {
     if (false) // make false to run unit-tests
     {
-        std::string First(49, '*');
-        std::string Second{"|   Title       |   isbn        |   price       |"};
-        std::cout << First << std::endl;
-        std::cout << Second << std::endl;
-        std::cout << First << std::endl;
+        // Code
     }
     else
     {
