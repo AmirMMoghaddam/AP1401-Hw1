@@ -18,8 +18,8 @@ namespace book
     };
     using Books = std::vector<Book>;
     Books read_database(std::string filepath);
-    std::string search(Books inventory, std::string title);
+    std::string search(const Books &inventory, std::string title);
     bool order(Books &inventory, Books &shopinglist, std::string isbn);
-    double get_receipt(Books shopinglist); // complete the print
+    double get_receipt(const Books &shopinglist); // complete the print
 
 }

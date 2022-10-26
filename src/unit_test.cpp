@@ -98,11 +98,9 @@
 //     Books shopinglist;
 
 //     std::string isbn = search(inventory, "What to Expect the First Year");
-//     std::cout << inventory[45].count << std::endl;
 //     EXPECT_EQ(inventory[45].count, 15); // before order
 
 //     bool ordered = order(inventory, shopinglist, isbn);
-//     std::cout << inventory[45].count << std::endl;
 //     EXPECT_EQ(inventory[45].count, 14); // after order
 // }
 
@@ -193,6 +191,7 @@
 // TEST(HW1Test, TEST17)
 // {
 //     using namespace regression;
+//     Data dataset = read_database("fish.txt");
 
 //     EXPECT_NEAR(cost_function(dataset, {0, 0, 0, 0}), 641234, 10);
 

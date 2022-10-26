@@ -40,7 +40,7 @@ Books book::read_database(std::string filepath)
     return ListOfBooks;
 }
 
-std::string book::search(Books inventory, std::string title)
+std::string book::search(const Books &inventory, std::string title)
 {
     std::string isbn{"none"};
     for (auto Tempbook : inventory)
@@ -71,7 +71,7 @@ bool book::order(Books &inventory, Books &shopinglist, std::string isbn)
     return true;
 }
 
-double book::get_receipt(Books shopinglist)
+double book::get_receipt(const Books &shopinglist)
 {
 
     double fullprice{0.0};
